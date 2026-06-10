@@ -1,6 +1,6 @@
 # Usecase Writer
 
-A Claude Code skill for writing high-quality 1-minute product usecase scripts for Atypica.AI. Based on analysis of successful case studies (pet lip balm, Volvo, DINK family research).
+A Claude Code skill for writing high-quality 1-minute product usecase scripts for Atypica.AI. Based on analysis of successful case studies (pet lip balm, EV for woman, DINK family research).
 
 ## Features
 
