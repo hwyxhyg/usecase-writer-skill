@@ -1,0 +1,12 @@
+# Exclude files not for GitHub
+GITHUB_UPLOAD.md
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
