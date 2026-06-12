@@ -3,7 +3,7 @@ name: usecase-writer
 version: 1.1.0
 description: "撰写高质量的 Atypica usecase 脚本（1min 视频文案）。基于宠物润唇膏、沃尔沃、丁克家庭等优秀案例总结的写作标准。当用户需要撰写或优化 usecase 脚本时使用。"
 metadata:
-  author: "黄文玥"
+  author: "Wenyue Huang"
   based_on: "逐字稿案例分析（宠物润唇膏、沃尔沃、丁克家庭）"
   changelog:
     - v1.1.0 (2026-06-10): 去除硬性证据要求，强化功能确认环节，增加视觉呈现建议
