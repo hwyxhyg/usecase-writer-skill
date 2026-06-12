@@ -3,7 +3,7 @@ name: usecase-writer-long
 version: 1.0.0
 description: "撰写详细的 Atypica usecase 脚本（长版本 - 录屏演示版，2-4min）。全流程产品界面回扣，适合产品演示和功能教学。当用户需要详细展示产品操作的 usecase 时使用。如需简短版本，请使用 usecase-writer-short。"
 metadata:
-  author: "黄文玥"
+  author: "Wenyue Huang"
   based_on: "usecase-writer-short 的扩展版本"
   version_type: "录屏演示版 - 全流程产品界面回扣"
   duration: "2-4 分钟"
