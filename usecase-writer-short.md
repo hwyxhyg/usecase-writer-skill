@@ -3,7 +3,7 @@ name: usecase-writer
 version: 1.4.0
 description: "撰写高质量的 Atypica usecase 脚本（短版本，1-2min）。覆盖产品痛点、解决方案、产品优势及适度 CTA。产品界面回扣聚焦在输入和报告环节。如需详细的全流程产品演示，请使用 usecase-writer-demo。"
 metadata:
-  author: "黄文玥"
+  author: "Wenyue Huang"
   based_on: "Multiple usecase script analysis (anonymized case studies)"
   version_type: "短版本 - 聚焦输入和输出的产品回扣"
   duration: "1-2 分钟"
