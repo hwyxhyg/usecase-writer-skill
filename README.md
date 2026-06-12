@@ -1,158 +1,114 @@
-# Usecase Writer
+# Usecase Writer Skill
 
-A Claude Code skill for writing high-quality 1-minute product usecase scripts for Atypica.AI. Based on analysis of successful case studies (pet lip balm, EV for woman, DINK family research).
+> **v2.0 更新**：新增 Long 版本（2-4min 录屏演示版），Short 版本已优化并匿名化所有案例。
 
-## Features
+高质量 usecase 脚本撰写框架，适用于 Atypica 产品演示或任何需要讲好产品故事的场景。
 
-- **Narrative Structure**: 7-step golden formula (hook → problem → solution → process → findings → insight → CTA)
-- **Quality Assurance**: 20-point scoring system (≥16 passing threshold)
-- **Visual Guidance**: Integrated on-screen text and scene breakdown suggestions
-- **Evidence Standards**: Flexible evidence requirements with clear process descriptions
-- **Multi-Template Support**: Market validation, panel reactivation, comparison verification
+## 🎯 选择版本
 
-## Installation
+| 版本 | 时长 | 适用场景 | 产品界面回扣 | 质量评分 |
+|------|------|----------|-------------|----------|
+| [**Short**](usecase-writer-short.md) | 1-2 min | 社交媒体、快速传播 | 最小化（输入+报告） | 20分制 |
+| [**Long**](usecase-writer-long.md) | 2-4 min | 产品演示、销售展示 | 全流程（7个录屏点） | 25分制 |
 
-1. Clone or download this repository
-2. Place the `usecase-writer` folder in your Claude Code skills directory:
-   - **Windows**: `C:\Users\<YourName>\.claude\skills\`
-   - **macOS/Linux**: `~/.claude/skills/`
-3. Restart Claude Code
+**如何选择？**
 
-## Usage
+- **需要快速传播、吸引注意力** → 用 Short 版本
+  - 适合社交媒体、概念介绍
+  - 用动效和图形替代大部分产品录屏
+  - 节奏紧凑，1-2 分钟讲完故事
 
-### Basic Invocation
+- **需要建立可信度、展示产品** → 用 Long 版本
+  - 适合产品演示、销售 Demo、功能教学
+  - 全流程产品录屏（从输入问题到完整报告）
+  - 让受众看到产品如何工作
 
-```
-/usecase-writer [your request]
-```
+## 📚 示例
 
-### Examples
+查看 [examples/](examples/) 获取匿名化的参考脚本：
 
-**Write a new usecase:**
-```
-/usecase-writer Write a usecase for a dairy brand's Gen Z strategy research using Sage simulation
-```
+- **dairy_brand_short.md** - 乳制品品牌年轻化案例（短版本，190词）
+- **dairy_brand_long.md** - 乳制品品牌年轻化案例（长版本，310词）
 
-**Optimize existing script:**
-```
-/usecase-writer Optimize this script: [paste your script]
-```
+两个示例均已通过质量检查（Short: 20/20，Long: 25/25）。
 
-### Information Required
+## ✨ 核心特点
 
-The skill will guide you through collecting:
+### 短版本（1-2min）
+- ✅ 产品回扣最小化：只在输入和报告环节
+- ✅ 中间过程灵活：用动效、图表、卡片替代产品录屏
+- ✅ 节奏紧凑：~190 词
+- ✅ 适合快速传播
 
-1. **Case Background**
-   - Brand/industry type (anonymized if needed)
-   - Core research question
-   - Target audience
+### 长版本（2-4min）
+- ✅ 全流程产品回扣：7 个录屏点覆盖输入/处理/输出
+- ✅ 详细录屏指导：每个环节都有时长建议和具体描述
+- ✅ 叙事完整：~310 词
+- ✅ 建立可信度：受众看到完整的产品操作流程
 
-2. **Pain Points**
-   - Traditional method limitations (cost, time, feasibility)
-   - Why the research is challenging
+## 🚀 快速开始
 
-3. **Atypica Application**
-   - Features used (Interview / Panel / Sage / Social Media)
-   - Sample size and persona composition
-   - Research framework (JTBD / Kano / Fishbowl)
+1. **选择版本**：根据你的使用场景选择 Short 或 Long
+2. **阅读 skill 文件**：了解完整的撰写流程和质量标准
+3. **参考示例**：查看 examples/ 中的匿名化案例
+4. **撰写脚本**：按照结构撰写，使用质量清单自检
+5. **迭代优化**：Short 版本 ≥16/20 分合格，Long 版本 ≥20/25 分合格
 
-4. **Research Results**
-   - Core findings (2-3 layers)
-   - Respondent quotes (if available)
-   - Quantitative data (if available)
+## 📦 安装（Claude Code 用户）
 
-### Output Format
-
-**Default:**
-- English script (150-180 words) with visual annotations
-- Quality score (20-point scale with breakdown)
-- Improvement suggestions (if score < 16)
-
-**Optional (when requested):**
-- Chinese version
-- On-screen text suggestions (3-5 concise phrases)
-- Scene breakdown with visual direction
-
-## Template Types
-
-### 1. Market Validation
-Validates new product concepts with target users.
-- **Example**: Pet lip balm market research
-- **Keywords**: validate, market demand, concept test
-
-### 2. Panel Reactivation
-Re-engages previous research participants for deeper discussion.
-- **Example**: Volvo female drivers MPV design
-- **Keywords**: panel, reactivate, bring together
-
-### 3. Comparison Verification
-Validates or deepens traditional research findings using Atypica.
-- **Example**: Beauty product image testing
-- **Keywords**: compare, verify, traditional method
-
-## Quality Standards
-
-### Scoring System (20 points total, ≥16 to pass)
-
-**Narrative Structure [7 pts]**
-- Hook, problem amplification, transition, process clarity, layered findings, insight, CTA elevation
-
-**Evidence Sufficiency [5 pts]**
-- Sample size, cost/time comparison (or detailed process), quotes (or role interaction), framework, quantitative data
-
-**Language Quality [4 pts]**
-- Word count (150-180), active voice, strong verbs, specific details
-
-**Product Capability [4 pts]**
-- Deep feature demonstration, pain point alignment, focused relevance, unique value
-
-## Visual Annotation Guide
-
-Scripts include visual suggestions using 【】markers:
-
-```
-A dairy group faced a brutal truth【On-screen: "Trusted ≠ Desired"】...
-
-By feeding archives into Sage【Screen recording: upload interface】...
-
-As one persona put it【Quote card】: "We buy narratives about ourselves."
+```bash
+# 复制到 Claude Code skills 目录
+cp usecase-writer-short.md ~/.claude/skills/usecase-writer-short/skill.md
+cp usecase-writer-long.md ~/.claude/skills/usecase-writer-long/skill.md
 ```
 
-## Version History
+然后在 Claude Code 中使用：
+```
+/usecase-writer-short [描述你的案例]
+/usecase-writer-long [描述你的案例]
+```
 
-### v1.1.0 (2026-06-10)
-- Removed mandatory evidence requirements
-- Enhanced feature confirmation workflow (Interview / Panel / Sage / Social Media)
-- Added visual presentation guidance (on-screen text, recordings, scene breakdowns)
-- Clarified that "clear process + visual support" can replace some data evidence
+## 📖 叙事结构（两版本通用）
 
-### v1.0.0 (2026-06-10)
-- Initial release based on case study analysis
-- Established 7-step narrative formula
-- Built 20-point quality scoring system
-- Provided 3 reference templates
+所有 usecase 脚本都遵循这个黄金公式：
 
-## Requirements
+1. **钩子式开头**（1-2句）- 用具体、高风险的问题开场
+2. **问题放大**（2-3句）- 展示传统方法的限制（成本/时间/伦理/可行性）
+3. **对比转折**（1句）- 引入 Atypica
+4. **研究流程展示**（2-3句）- 展示研究设计和方法
+5. **分层发现呈现**（主体部分）- 用 First/Second/Third 结构化呈现
+6. **解决方案呈现**（必须有）- 给出清晰的 to-do next
+7. **核心洞察**（1-2句，可选）- 提炼更深层的 why
+8. **CTA 升华**（1句）- 诗意化的价值主张
 
-- Claude Code (latest version recommended)
-- No additional dependencies
+## 🆕 v2.0 更新内容（2026-06-12）
 
-## License
+- ✅ **新增 Long 版本**（2-4min，全流程产品录屏演示版）
+- ✅ **所有案例严格匿名化**（移除品牌名、地理位置等敏感信息）
+- ✅ **提供完整示例文件**（dairy_brand_short.md + dairy_brand_long.md）
+- ✅ **优化质量评分体系**（Short: 20分制，Long: 25分制）
+- ✅ **明确产品界面回扣策略**（Short 最小化，Long 全流程）
 
-MIT License - feel free to use and modify for your needs.
+### ⬆️ 从 v1.0 升级
 
-## Contributing
+如果你之前使用的是单一版本的 usecase-writer：
 
-Feedback and improvements are welcome. Please submit issues or pull requests with:
-- Clear description of the problem or enhancement
-- Example scripts demonstrating the issue (if applicable)
-- Suggested modifications to SKILL.md
+- 现在的 **Short 版本**对应原版本（已优化并匿名化）
+- 新增的 **Long 版本**适合需要详细产品演示的场景
+- 根据你的实际需求选择合适的版本
+- 旧的 SKILL.md 可以作为参考，但建议使用新版本
 
-## Author
+## 🤝 贡献
 
-Created by Huang Wenyue (黄文玥)  
-Based on analysis of Atypica.AI usecase transcripts and best practices.
+欢迎提交 Issue 或 Pull Request！
+
+如果你有优秀的 usecase 案例（已匿名化），欢迎贡献到 examples/ 目录。
+
+## 📄 License
+
+MIT
 
 ---
 
-**Related**: For reference examples, see the case studies mentioned in SKILL.md (pet lip balm cross-border, Volvo panel research, DINK family social experiment).
+**作者：** 小黑  
+**最后更新：** 2026-06-12
